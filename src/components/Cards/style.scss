@@ -1,0 +1,41 @@
+@import "../../assets/scss/partials/mixin";
+
+.card {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  transform: scale(1);
+  transition-duration: 0.5s;
+  @include desktop-breakpoint {
+    position: static;
+    margin: 0;
+  }
+  &-cover img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    filter: brightness(70%);
+  }
+  &-title {
+    z-index: 1;
+    position: absolute;
+    bottom: 1rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    @include desktop-breakpoint {
+      bottom: 20px;
+    }
+  }
+}
+
+.card,
+.card-cover img {
+  height: 255px;
+  @include desktop-breakpoint {
+    width: 340px;
+    height: 340px;
+  }
+}

@@ -1,25 +1,29 @@
-import logo from '../../logo.svg';
-import '../../App.css';
+import {useFetch} from "../../utils/fetch";
+import Card from "../../components/Cards";
+import Banner from "../../components/Banner";
 
-function Index() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/Index.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import homeBanner from "../../assets/home-banner.jpg";
+
+import "./style.scss";
+
+function Home() {
+    document.title = 'Accueil - Kasa';
+
+    let annonces = useFetch(window.location.origin + "/annonces.json");
+    const jsonData = JSON.stringify(annonces);
+
+    return (
+        <section className="home">
+            <Banner cover={homeBanner} title="Chez vous, partout et ailleurs"/>
+            {annonces.fetchedData && (
+                <div className="card-list">
+                    {annonces.fetchedData.map((annonce) => (
+                        <Card key={annonce.id} link={`/annonce/${annonce.id}`} title={annonce.title} cover={annonce.cover} data={annonce}/>
+                    ))}
+                </div>
+            )}
+        </section>
+    );
 }
 
-export default Index;
+export default Home;

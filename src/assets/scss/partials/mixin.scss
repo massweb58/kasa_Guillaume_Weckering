@@ -1,0 +1,23 @@
+@import './variables';
+
+@mixin main-typography {
+  font-family: 'Montserrat', sans-serif;
+  font-size: map-get($font-size, mobile);
+  @include desktop-breakpoint {
+    font-size: map-get($font-size, desktop);
+  }
+}
+
+@mixin title-typography {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin desktop-breakpoint {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin no-margin {
+  margin: 0;
+}

@@ -1,0 +1,10 @@
+@import "./src/assets/scss/partials/mixin";
+
+.about {
+  &-banner {
+    height: 223px;
+  }
+  &-section {
+    padding-bottom: 80px;
+  }
+}
