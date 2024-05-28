@@ -21,6 +21,15 @@ function Collapse ({title, content}) {
         setRotateState(setActive === 'active' ? 'collapse-icon rotate' : 'collapse-icon');
     }
 
+    const contentArray = [];
+    if (!Array.isArray(content)) {
+        contentArray.push(content)
+    } else {
+        content.forEach((content) => {
+            contentArray.push(content)
+        })
+    }
+
     return (
         <div className="collapse-section">
             <button className={`collapse ${setActive}`} onClick={toggleCollapse}>
@@ -29,7 +38,11 @@ function Collapse ({title, content}) {
             </button>
             <div ref={contentCollapse} style={{ maxHeight: `${setHeight}` }} className="collapse-content">
                 <div className="collapse-text">
-                    <div>{content}</div>
+                    <div>
+                        {contentArray.map((content, index) => (
+                            <div key={`${content}-${index}`}>{content}</div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

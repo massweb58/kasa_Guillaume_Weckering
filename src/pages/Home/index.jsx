@@ -10,7 +10,6 @@ function Home() {
     document.title = 'Accueil - Kasa';
 
     let annonces = useFetch(window.location.origin + "/annonces.json");
-    const jsonData = JSON.stringify(annonces);
 
     return (
         <section className="home">
@@ -18,7 +17,7 @@ function Home() {
             {annonces.fetchedData && (
                 <div className="card-list">
                     {annonces.fetchedData.map((annonce) => (
-                        <Card key={annonce.id} link={`/annonce/${annonce.id}`} title={annonce.title} cover={annonce.cover} data={annonce}/>
+                        <Card key={annonce.id} link={`/annonce/${annonce.id}`} title={annonce.title} cover={annonce.cover}/>
                     ))}
                 </div>
             )}

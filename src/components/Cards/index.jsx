@@ -2,15 +2,11 @@ import {Link} from "react-router-dom";
 
 import './style.scss';
 
-function Card({link, title, cover, data}) {
-    const jsonData = JSON.stringify(data);
+function Card({link, title, cover}) {
 
     return (
         <div className="card">
-            <Link to={{
-                pathname: link,
-                search: `?data=${encodeURIComponent(jsonData)}`
-            }}>
+            <Link to={link}>
                 <div className="card-cover">
                     <img src={cover} alt={title}/>
                 </div>

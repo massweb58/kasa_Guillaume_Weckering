@@ -1,0 +1,135 @@
+@import "./src/assets/scss/partials/mixin";
+
+.annonce {
+  &-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 142.6%;
+    @include desktop-breakpoint {
+      font-size: 36px;
+    }
+  }
+  &-location {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.6%;
+    @include desktop-breakpoint {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  }
+  &-info {
+    &-wrapper {
+      @include desktop-breakpoint {
+        width: 60%;
+      }
+    }
+    &-rating-host-wrapper {
+      @include desktop-breakpoint {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 26px;
+      }
+    }
+  }
+}
+
+.tag-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rating {
+  &-wrapper {
+    @include desktop-breakpoint {
+      order: 2;
+    }
+  }
+  &-host-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    @include desktop-breakpoint {
+      flex-direction: column;
+      align-items: flex-end;
+      width: 40%;
+      margin-bottom: 0;
+    }
+  }
+}
+.host {
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    @include desktop-breakpoint {
+      order: 1;
+      margin-bottom: 24px;
+    }
+  }
+  &-name {
+    margin-right: 12px;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: end;
+    @include desktop-breakpoint {
+      height: 64px;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+  &-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    @include desktop-breakpoint {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
+
+.description-equipments-wrapper {
+  @include desktop-breakpoint {
+    display: flex;
+    justify-content: space-between;
+  }
+  .collapse {
+    @include desktop-breakpoint {
+      border-radius: 10px;
+    }
+    &-section {
+      @include desktop-breakpoint {
+        width: 47%;
+        padding: 0;
+      }
+    }
+    &-title {
+      @include desktop-breakpoint {
+        font-size: 18px;
+      }
+    }
+    &-icon {
+      @include desktop-breakpoint {
+        margin-right: 12px;
+      }
+    }
+    &-text {
+      @include desktop-breakpoint {
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        font-size: 18px;
+      }
+    }
+  }
+}

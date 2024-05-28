@@ -1,0 +1,13 @@
+@import "../../assets/scss/partials/mixin";
+
+.star,
+.star-empty {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  @include desktop-breakpoint {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}
