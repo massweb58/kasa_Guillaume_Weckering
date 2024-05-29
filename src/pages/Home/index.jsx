@@ -17,7 +17,7 @@ function Home() {
             {annonces.fetchedData && (
                 <div className="card-list">
                     {annonces.fetchedData.map((annonce) => (
-                        <Card key={annonce.id} link={`/annonce/${annonce.id}`} title={annonce.title} cover={annonce.cover}/>
+                        <Card key={annonce.id} link={`/annonce/${annonce.id}`} title={annonce.title} cover={annonce.cover} data={annonce}/>
                     ))}
                 </div>
             )}

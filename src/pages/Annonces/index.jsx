@@ -1,5 +1,5 @@
 import {useFetch} from "../../utils/fetch";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 
 import Error from "../../components/Error";
 
@@ -12,19 +12,21 @@ import Collapse from "../../components/Collapse";
 import "./style.scss";
 
 function Annonce() {
-    const annonces = useFetch(window.location.origin + "/annonces.json");
-    const {annonceId} = useParams();
+    // const annonces = useFetch(window.location.origin + "/annonces.json");
+    // const {annonceId} = useParams();
 
     let thisAnnonce;
-    if (annonces.fetchedData) {
-        thisAnnonce = annonces.fetchedData.find(
-            (annonce) => annonce.id === annonceId
-        )
-    }
+    // if (annonces.fetchedData) {
+    //     thisAnnonce = annonces.fetchedData.find(
+    //         (annonce) => annonce.id === annonceId
+    //     )
+    // }
+    const location = useLocation();
+    thisAnnonce = location.state;
 
-    if (annonces.error) {
-        return <Error/>
-    }
+    // if (annonces.error) {
+    //     return <Error/>
+    // }
 
     if (!thisAnnonce) {
         return <Error/>
