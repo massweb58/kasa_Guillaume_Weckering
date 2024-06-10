@@ -23,22 +23,14 @@ function Slideshow ({images}) {
     return (
         <div className="slideshow">
             {length > 1 && (
-                <img
-                    src={sliderArrow}
-                    className="left-arrow"
-                    onClick={previousSlide}
-                    alt="Previous arrow"
-                />
+                <img src={sliderArrow} className="left-arrow" onClick={previousSlide} alt="Previous arrow" />
             )}
             {length > 1 && (
-                <img
-                    src={sliderArrow}
-                    className="right-arrow"
-                    onClick={nextSlide}
-                    alt="Next arrow"
-                />
+                <img src={sliderArrow} className="right-arrow" onClick={nextSlide} alt="Next arrow" />
             )}
-
+            {length > 1 &&
+                <span className="slide-number">{current + 1}/{length}</span>
+            }
             {images.map((slider, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={`slider-${index}`}>

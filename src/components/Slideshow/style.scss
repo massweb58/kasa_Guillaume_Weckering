@@ -18,6 +18,19 @@
   border-radius: 10px;
 }
 
+.slide-number {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  top: 87%;
+  margin-left: 49%;
+  color: white;
+  font-size: 18px;
+  @include desktop-breakpoint {
+    display: block;
+  }
+}
+
 .right-arrow,
 .left-arrow {
   z-index: 1;

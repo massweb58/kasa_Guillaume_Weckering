@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import "./style.scss"
 
 function Error({
-                   title = 'Erreur',
-                   subtitle = 'Oops, une erreur est survenue.',
-                   subtitle2 = '',
+                   title = "404",
+                   subtitle = "Oups! La page que",
+                   subtitle2 = "vous demandez n'existe pas.",
                }) {
     return (
         <section className="error">

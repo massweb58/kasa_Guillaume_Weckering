@@ -1,4 +1,4 @@
-import {useFetch} from "../../utils/fetch";
+import {useFetch} from "../../components/Utils/fetch";
 import {useLocation, useParams} from "react-router-dom";
 
 import Error from "../../components/Error";
@@ -26,7 +26,6 @@ function Annonce() {
             setThisAnnonce(fetchedAnnonce);
         }
     }, [fetchedData, annonceId, thisAnnonce]);
-
 
     if (error || isLoading || !thisAnnonce) {
         return <Error />

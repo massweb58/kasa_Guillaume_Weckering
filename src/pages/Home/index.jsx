@@ -1,4 +1,4 @@
-import {useFetch} from "../../utils/fetch";
+import {useFetch} from "../../components/Utils/fetch";
 import Card from "../../components/Cards";
 import Banner from "../../components/Banner";
 
