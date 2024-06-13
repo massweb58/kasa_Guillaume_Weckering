@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/kasa_Guillaume_Weckering/static/css/main.c8c9ef7a.css",
+    "main.js": "/kasa_Guillaume_Weckering/static/js/main.242d372f.js",
+    "static/media/home-banner.jpg": "/kasa_Guillaume_Weckering/static/media/home-banner.61352a7ae7ebff30e925.jpg",
+    "static/media/about-banner.jpg": "/kasa_Guillaume_Weckering/static/media/about-banner.10720cd2488c628ee695.jpg",
+    "static/media/logo.svg": "/kasa_Guillaume_Weckering/static/media/logo.0efd05846cb4f650536905c49cbc5edc.svg",
+    "static/media/star-inactive.svg": "/kasa_Guillaume_Weckering/static/media/star-inactive.266f8966517bbaf33c447d7cddff5859.svg",
+    "static/media/star.svg": "/kasa_Guillaume_Weckering/static/media/star.3d4af16550d68403347ec9c79f4a4bef.svg",
+    "index.html": "/kasa_Guillaume_Weckering/index.html",
+    "static/media/arrow.svg": "/kasa_Guillaume_Weckering/static/media/arrow.6be86a8ff7772b42b056a30c2d82b448.svg",
+    "static/media/slider-arrow.svg": "/kasa_Guillaume_Weckering/static/media/slider-arrow.c14a0413ca7b549250743f2691ae51e6.svg",
+    "main.c8c9ef7a.css.map": "/kasa_Guillaume_Weckering/static/css/main.c8c9ef7a.css.map",
+    "main.242d372f.js.map": "/kasa_Guillaume_Weckering/static/js/main.242d372f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8c9ef7a.css",
+    "static/js/main.242d372f.js"
+  ]
+}
